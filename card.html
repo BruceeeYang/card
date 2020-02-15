@@ -6,24 +6,42 @@
         <title>Personal card</title>
         <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
+
     </head>
     <style>       
         
     </style>
     <body>
-        <div class="wrapper">
-            <div class="card">
+        <div class="wrapper" id="app">
+            <div :class="bgColor">
                 <div class="card-img">
-                    <img src="images/personal.png" alt="">
+                    <img src="" alt="" :src="imgSrc">
                 </div>
                 <div class="card-text">
-                    <div class="card-text-info">
-                        <h3>Bruce Yang</h3>
-                        <h4>-ThinkPower Engineer</h4>
-                        <h5>2019 / 2 / 15</h5>
+                    <div class="card-text-info" :class="cardInfoStyle">
+                        <!-- 姓名 -->
+                        <h3 v-bind:title="name">
+                            {{name}}
+                        </h3>
+
+                        <!-- 內容 -->
+                        <h4>
+                            {{title}}
+                        </h4>
+
+                        <!-- 日期 -->
+                        <h5>
+                            {{date}}
+                        </h5>
+                        <input type="text" v-model="bgColor">
                     </div>
                 </div>
+                
             </div>
+            
         </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="vue/script.js"></script>
     </body>
 </html>
