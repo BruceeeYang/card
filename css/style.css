@@ -54,6 +54,13 @@
   width: 64%;
 }
 
+.card-text-work{
+  /* list-style: none; */
+  position: relative;
+  left: 28px;
+  top: 8px;
+}
+
 .card-text .card-text-info{
   position: relative;
   top: 50px;
@@ -68,7 +75,7 @@
 
 .card-text .card-text-info h5{
   position: relative;
-  top: 50px;
+  top: 30px;
   right: 16px;
   text-align: right;
 }
@@ -77,5 +84,17 @@
   width: 36%;
   padding-top: 12px;
   padding-left: 16px;
+}
+
+.inputText{
+  width: 10%;
+  border-radius: 1px;
+}
+
+button{
+  color: #192c66;
+  border-radius: 1px;
+  position: relative;
+  top: 3px;
 }
 

@@ -13,7 +13,7 @@
     </style>
     <body>
         <div class="wrapper" id="app">
-            <div :class="bgColor">
+            <div :class="bgColor" :style={background:inputColor1}>
                 <div class="card-img">
                     <img src="" alt="" :src="imgSrc">
                 </div>
@@ -22,18 +22,32 @@
                         <!-- 姓名 -->
                         <h3 v-bind:title="name">
                             {{name}}
+                            <br>
+                            {{subTitle}}
                         </h3>
 
                         <!-- 內容 -->
-                        <h4>
+                        <h4 v-if="showAngular">Angular</h4>
+                        <h4 v-else-if="showReact">React</h4>
+                        <h4 v-else>Vue</h4>
+                        <!-- <ul class="card-text-work">
+                            <li v-for="todo in todos">
+                                {{ todo.text }}
+                            </li>
+                        </ul> -->
+                        <!-- <h4>
                             {{title}}
-                        </h4>
-
+                        </h4> -->
                         <!-- 日期 -->
                         <h5>
                             {{date}}
                         </h5>
-                        <input type="text" v-model="bgColor">
+
+                        <!-- <input type="text" v-model="greeting" class="inputText"> -->
+                        <!-- <button @click="onSubmit">Submit</button> -->
+                        <!-- <input type="color" v-model="inputColor1"> -->
+                        <!-- <input type="color" v-model="inputColor2"> -->
+                        <!-- <button @click="changeColor">Submit</button> -->
                     </div>
                 </div>
                 
